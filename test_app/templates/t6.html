@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 2</title>
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<div class="topnav" style="background-color:#6b6b6b">
+  <a>Test 1</a>
+  <a href="http://127.0.0.1:8000/Tests">Home</a>
+  <a href="http://127.0.0.1:8000/Exit">Exit</a>
+</div>
+<form method="post" action="{%url 't6'%}">
+     {% csrf_token %}
+    <div style="padding-top: 2rem;">
+        <center><h1 style="border-radius: 30px; background-color:#6b6b6b;width: 600px;height:40px;"><font color="white">Question 2: Find true answer</font></h1></center>
+        <center><h1 style="border-radius: 30px; background-color:#6b6b6b;width: 550px;height:40px;"><font color="white">// ?</font></h1></center>
+        <div style="padding-top: 2rem;">
+            <center><h1 style="border-radius: 30px; background-color:#6b6b6b;width: 300px;height:40px;"><font color="white">A 0.2</font></h1></center>
+            <center><h1 style="border-radius: 30px; background-color:#6b6b6b;width: 300px;height:40px;"><font color="white">B 5.2</font></h1></center>
+            <center><h1 style="border-radius: 30px; background-color:#6b6b6b;width: 300px;height:40px;"><font color="white">C 5</font></h1></center>
+        </div>
+        <div style="padding-top: 5rem;">
+        <center><input size="40px" style="padding:15px; activeground-color:black; #04AA6D" height="40px" type="text" name="data" id="image">
+    <button type="submit" name="set_button" style="padding:15px 40px; background-color:#6b6b6b;">Enter</button>
+        </center><div style="padding-left:1200px">
+            <button style="padding:15px 40px; background-color:#6b6b6b;"><a href="http://127.0.0.1:8000/Answer_sheet/">Answers</a></button>
+            </div>
+            </div>
+        </div>
+</form>
+
+</body>
